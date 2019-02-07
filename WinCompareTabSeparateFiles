@@ -1,0 +1,25 @@
+# Windowsで動く、2つのタブ区切りファイルの比較する機能を持つ
+- 2つのタブ区切りファイルをキー項目で比較する
+- 比較結果は差分がわかりやすいように出力する
+- 例
+FileA
+Key Item1
+1   AAA
+2   BBB
+3   CCC
+
+FileB
+Key Item1
+1   AAA
+3   BBB
+4   CCC
+
+Result Key File Line Item1
+OK     1   A    1    AAA
+OK     1   B    1    AAA
+NG     2   A    2    BBB
+NG     2   B    -    -
+NG     3   A    3    CCC
+NG     3   B    2    BBB
+NG     4   A    -    -
+NG     4   B    3    CCC
